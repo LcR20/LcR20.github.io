@@ -39,8 +39,14 @@
 <meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-08.png">
 <meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-10.png">
 <meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-09.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-11.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-12.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-13.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-04.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-15.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-16.png">
 <meta property="article:published_time" content="2022-04-19T02:19:19.000Z">
-<meta property="article:modified_time" content="2022-04-21T03:59:05.325Z">
+<meta property="article:modified_time" content="2022-04-27T13:16:03.096Z">
 <meta property="article:author" content="Luminescent">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lcr20.xyz/images/Matlab/mat-01.png">
@@ -216,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-21 11:59:05" itemprop="dateModified" datetime="2022-04-21T11:59:05+08:00">2022-04-21</time>
+                <time title="修改时间：2022-04-27 21:16:03" itemprop="dateModified" datetime="2022-04-27T21:16:03+08:00">2022-04-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -288,12 +294,28 @@
 <p>4.<code>plot(t1,x1,t2,x2,...,tn,xn)</code><br>没玩太明白这个命令,直接上例子吧<br><img src="/images/Matlab/mat-06.png" alt="这是图片" title="x与y"><br>这里如果把0.003换成0.3,图形会变成折线。可以看出,点越多,得到的图形越光滑。<br></br></p>
 <h2 id="绘图命令的选项"><a href="#绘图命令的选项" class="headerlink" title="绘图命令的选项"></a>绘图命令的选项</h2><p>plot命令可以有选项,用于确定线和标记的类型及颜色。带有选项的plot命令的形式如下:<br><code>plot(x, y,‘line specifiers’,’property name’, property value)</code><br>式中,x和y是两个同维数的向量;<br><code>line specifiers</code>给出曲线和标记的类型及颜色;<br><code>property name</code> 和 <code>property value</code> 给出曲线的宽标记的尺寸、边框和填充色。</p>
 <p>例如:</p>
-<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;r*-&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;r-&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;g--&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;g:o&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;o:g&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;r&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;r*-&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;r-&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;g--&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;g:o&#x27;</span>)</span><br><span class="line">&gt;&gt; <span class="built_in">plot</span>(x,y,<span class="string">&#x27;o:g&#x27;</span>)</span><br></pre></td></tr></table></figure>
 <p>这里给出相关参数的表格<br><img src="/images/Matlab/mat-07.png" alt="这是图片" title="表格"><br>三者之间无需考虑顺序问题,参见例子最后一条</p>
 <p>还有一个例子需要记忆<br><code>plot(x,y,’g:o’,’LineWidth’,2,’markersize’,12,’MarkerEdgeColor’,’g’,’markerfacecolor’,’y’)</code><br>它表示点用绿色的点线连接,圆形标记;线宽是2;圆形标记的大小是12点;标记有绿色边线;标记用黄色填充。</p>
-<h2 id="图形的绘制与注释"><a href="#图形的绘制与注释" class="headerlink" title="图形的绘制与注释"></a>图形的绘制与注释</h2><p>二维图形生成后比较常用<code>插入</code>这个工具栏<br><img src="/images/Matlab/mat-08.png" alt="这是图片" title="“插入”工具栏"><br>其中的工具基本上可以看名字猜用途</p>
+<h2 id="图形绘制后的注释"><a href="#图形绘制后的注释" class="headerlink" title="图形绘制后的注释"></a>图形绘制后的注释</h2><p>二维图形生成后比较常用<code>插入</code>这个工具栏<br><img src="/images/Matlab/mat-08.png" alt="这是图片" title="“插入”工具栏"><br>其中的工具基本上可以看名字猜用途</p>
 <p>同时,菜单中的线条等均可以通过旁边的<code>查看</code>内的<code>图窗选项板</code>加入<br><img src="/images/Matlab/mat-10.png" alt="这是图片" title="图窗选项板"></p>
 <p>另外,若想实现图中的网格效果,需要在生成图形后执行以下命令<br><code>grid on</code><br><img src="/images/Matlab/mat-09.png" alt="这是图片" title="gird on"></p>
+<h1 id="三维图形的绘制"><a href="#三维图形的绘制" class="headerlink" title="三维图形的绘制"></a>三维图形的绘制</h1><p>使用指令<br><code>plot3(x,y,z)</code><br>上方的选项同样可以加在这个指令中<br>&#96;plot3(x, y, z,‘line specifiers’,’property name’, property value)</p>
+<p>例如:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; t=(<span class="number">0</span>:<span class="built_in">pi</span>/<span class="number">50</span>:<span class="number">10</span>*<span class="built_in">pi</span>);</span><br><span class="line"><span class="built_in">plot3</span>(<span class="built_in">sin</span>(t),<span class="built_in">cos</span>(t),t0)</span><br><span class="line">grid on</span><br></pre></td></tr></table></figure>
+<p>得到结果<br><img src="/images/Matlab/mat-11.png" alt="这是图片" title="一个三维图形"></p>
+<h2 id="网状图与表面图"><a href="#网状图与表面图" class="headerlink" title="网状图与表面图"></a>网状图与表面图</h2><p>若已知一个二元函数z&#x3D;f(x,y),可以利用Matlab绘制出它的三维模型。<br>为此,需要运用函数<code>meshgrid</code>生成网格矩阵数据x和y,然后利用函数z的表达式计算出不同组x,y下对应的的z值,再运用函数<code>mesh(x,y,z)</code>生成网状图,或者函数<code>surf(x,y,z)</code>生成表面图</p>
+<p>例如:<br>绘制函数 z&#x3D;x^2+y^2 </p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; [x,y]=<span class="built_in">meshgrid</span>(<span class="number">10</span>:<span class="number">10</span>); <span class="comment">%这里利用meshgrid函数绘制了一个21*21的格点矩阵,参见下图</span></span><br><span class="line">z=x.^<span class="number">2</span>+y.^<span class="number">2</span>;</span><br><span class="line">mesh(z) <span class="comment">%使用mesh(x,y,z)效果一样</span></span><br></pre></td></tr></table></figure>
+<p>运行后得到结果<br><img src="/images/Matlab/mat-12.png" alt="这是图片" title="网状图"></p>
+<p>使用meshgrid所绘制的(x,y)格点矩阵<br><img src="/images/Matlab/mat-13.png" alt="这是图片" title="格点矩阵"></p>
+<p>而<code>surf函数</code>则专门用于绘制着色的曲面图,它对数据的要求与<code>mesh函数</code>相同<br>例如<br>绘制函数 z&#x3D;x^2+y^2 </p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;[x,y]=<span class="built_in">meshgrid</span>(<span class="number">-10</span>:<span class="number">10</span>);</span><br><span class="line">z=x.^<span class="number">2</span>+y.^<span class="number">2</span>;</span><br><span class="line">surf(z)</span><br></pre></td></tr></table></figure>
+
+<p>运行后得到结果<br><img src="/images/Matlab/mat-04.png" alt="这是图片" title="着色曲面图"></p>
+<h2 id="等高线"><a href="#等高线" class="headerlink" title="等高线"></a>等高线</h2><p><code>函数mesh</code>有扩展函数<code>meshc(x,y,z)</code>,在绘制三维网格图的同时,还绘出等高线。如果将<code>函数surf</code>换成扩展函数<code>surfc(x,y,z)</code>,即在绘制着色的三维表面图的同时,还绘出等高线。<br><img src="/images/Matlab/mat-15.png" alt="这是图片" title="画出等高线的surf函数"></p>
+<p>而只绘制等高线的函数是<code>contour3(x,y,z)</code><br><img src="/images/Matlab/mat-16.png" alt="这是图片" title="gird on"></p>
+<p>去掉数字3后的可以绘制等高线在xOy处的投影<br><code>contour(x,y,z)</code></p>
 
     </div>
 
@@ -372,7 +394,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%BA%94%E7%94%A8Matlab"><span class="nav-number">1.</span> <span class="nav-text">开始应用Matlab</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMatlab"><span class="nav-number">1.1.</span> <span class="nav-text">什么是Matlab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%BA%94%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">开始应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%BB%98%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">二维图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.1.</span> <span class="nav-text">功能介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">绘制二维图形的基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4%E7%9A%84%E9%80%89%E9%A1%B9"><span class="nav-number">2.3.</span> <span class="nav-text">绘图命令的选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%9A%84%E7%BB%98%E5%88%B6%E4%B8%8E%E6%B3%A8%E9%87%8A"><span class="nav-number">2.4.</span> <span class="nav-text">图形的绘制与注释</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%BA%94%E7%94%A8Matlab"><span class="nav-number">1.</span> <span class="nav-text">开始应用Matlab</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMatlab"><span class="nav-number">1.1.</span> <span class="nav-text">什么是Matlab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%BA%94%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">开始应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%BB%98%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">二维图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.1.</span> <span class="nav-text">功能介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">绘制二维图形的基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4%E7%9A%84%E9%80%89%E9%A1%B9"><span class="nav-number">2.3.</span> <span class="nav-text">绘图命令的选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%BB%98%E5%88%B6%E5%90%8E%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="nav-number">2.4.</span> <span class="nav-text">图形绘制后的注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%9A%84%E7%BB%98%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">三维图形的绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%8A%B6%E5%9B%BE%E4%B8%8E%E8%A1%A8%E9%9D%A2%E5%9B%BE"><span class="nav-number">3.1.</span> <span class="nav-text">网状图与表面图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E9%AB%98%E7%BA%BF"><span class="nav-number">3.2.</span> <span class="nav-text">等高线</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -430,7 +452,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.8k字</span>
+  <span class="post-count">博客全站共4.2k字</span>
 </div>
 <br>
 
