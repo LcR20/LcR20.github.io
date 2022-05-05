@@ -14,12 +14,13 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
   <script src="/lib/pace/pace.min.js"></script>
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"lcr20.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"lcr20.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="此文仅记录个人于Matlab学习中注意到的要点以方便记忆与复习">
@@ -46,7 +47,7 @@
 <meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-15.png">
 <meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-16.png">
 <meta property="article:published_time" content="2022-04-19T02:19:19.000Z">
-<meta property="article:modified_time" content="2022-04-27T13:16:03.096Z">
+<meta property="article:modified_time" content="2022-04-27T13:17:53.553Z">
 <meta property="article:author" content="Luminescent">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lcr20.xyz/images/Matlab/mat-01.png">
@@ -222,7 +223,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-27 21:16:03" itemprop="dateModified" datetime="2022-04-27T21:16:03+08:00">2022-04-27</time>
+                <time title="修改时间：2022-04-27 21:17:53" itemprop="dateModified" datetime="2022-04-27T21:17:53+08:00">2022-04-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -314,8 +315,8 @@
 
 <p>运行后得到结果<br><img src="/images/Matlab/mat-04.png" alt="这是图片" title="着色曲面图"></p>
 <h2 id="等高线"><a href="#等高线" class="headerlink" title="等高线"></a>等高线</h2><p><code>函数mesh</code>有扩展函数<code>meshc(x,y,z)</code>,在绘制三维网格图的同时,还绘出等高线。如果将<code>函数surf</code>换成扩展函数<code>surfc(x,y,z)</code>,即在绘制着色的三维表面图的同时,还绘出等高线。<br><img src="/images/Matlab/mat-15.png" alt="这是图片" title="画出等高线的surf函数"></p>
-<p>而只绘制等高线的函数是<code>contour3(x,y,z)</code><br><img src="/images/Matlab/mat-16.png" alt="这是图片" title="gird on"></p>
-<p>去掉数字3后的可以绘制等高线在xOy处的投影<br><code>contour(x,y,z)</code></p>
+<p>而只绘制等高线的函数是<code>contour3(x,y,z)</code><br><img src="/images/Matlab/mat-16.png" alt="这是图片" title="等高线"></p>
+<p>去掉数字3后的<code>contour(x,y,z)</code>可以绘制等高线在xOy处的投影</p>
 
     </div>
 
@@ -514,6 +515,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
