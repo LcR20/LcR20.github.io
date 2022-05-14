@@ -46,8 +46,13 @@
 <meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-04.png">
 <meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-15.png">
 <meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-16.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-18.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-17.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-19.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-20.png">
+<meta property="og:image" content="http://lcr20.xyz/images/Matlab/mat-21.png">
 <meta property="article:published_time" content="2022-04-19T02:19:19.000Z">
-<meta property="article:modified_time" content="2022-05-05T13:46:39.915Z">
+<meta property="article:modified_time" content="2022-05-14T03:59:13.268Z">
 <meta property="article:author" content="Luminescent">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://lcr20.xyz/images/Matlab/mat-01.png">
@@ -223,7 +228,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-05-05 21:46:39" itemprop="dateModified" datetime="2022-05-05T21:46:39+08:00">2022-05-05</time>
+                <time title="修改时间：2022-05-14 11:59:13" itemprop="dateModified" datetime="2022-05-14T11:59:13+08:00">2022-05-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -317,6 +322,80 @@
 <h2 id="等高线"><a href="#等高线" class="headerlink" title="等高线"></a>等高线</h2><p><code>函数mesh</code>有扩展函数<code>meshc(x,y,z)</code>,在绘制三维网格图的同时,还绘出等高线。如果将<code>函数surf</code>换成扩展函数<code>surfc(x,y,z)</code>,即在绘制着色的三维表面图的同时,还绘出等高线。<br><img src="/images/Matlab/mat-15.png" alt="这是图片" title="画出等高线的surf函数"></p>
 <p>而只绘制等高线的函数是<code>contour3(x,y,z)</code><br><img src="/images/Matlab/mat-16.png" alt="这是图片" title="等高线"></p>
 <p>去掉数字3后的<code>contour(x,y,z)</code>可以绘制等高线在xOy处的投影</p>
+<hr>
+<h1 id="Matlab文件"><a href="#Matlab文件" class="headerlink" title="Matlab文件"></a>Matlab文件</h1><h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>可以将无法在命令窗口储存的指令存储进<code>M文件</code>中方便调用,调用时其内指令循序执行<br><img src="/images/Matlab/mat-18.png" alt="这是图片" title="于此处创建M文件"></p>
+<p>调用后其运行所得变量值会储存进工作空间中</p>
+<p>可以在命令窗口直接输入文件名后按<code>Enter</code>键运行,也可以在编辑器内使用<code>save and run</code>运行,最后结果都将显示在命令窗口内</p>
+<hr>
+<h1 id="Matlab程序设计"><a href="#Matlab程序设计" class="headerlink" title="Matlab程序设计"></a>Matlab程序设计</h1><h2 id="关系运算和逻辑运算"><a href="#关系运算和逻辑运算" class="headerlink" title="关系运算和逻辑运算"></a>关系运算和逻辑运算</h2><p>对于真假的判断,MATLAB把任何非0的数值都当做真,把0当做假;<br>但在关系和逻辑表达式的输出中,MATLAB会将真输出为1,将假输出为0</p>
+<h3 id="关系操作符和逻辑操作符"><a href="#关系操作符和逻辑操作符" class="headerlink" title="关系操作符和逻辑操作符"></a>关系操作符和逻辑操作符</h3><p>其中,关系运算符号主要有以下几种</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>=&#x3D;</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>&lt;&#x3D;</td>
+<td>小于或等于</td>
+</tr>
+<tr>
+<td>&gt;&#x3D;</td>
+<td>大于或等于</td>
+</tr>
+<tr>
+<td>~&#x3D;</td>
+<td>不等于</td>
+</tr>
+</tbody></table>
+<p>需注意,两个=&#x3D;才代表着等于的意思,一个=则是赋值的意思</p>
+<p>进行比较的过程中,两个阵列仅在维数(向量&#x2F;矩阵)相同时才能进行比较,结果是同样维数的逻辑数列,它的元素为1或0。<strong>当标量与阵列进行比较时,标量与阵列的每个元素进行比较,结果是一个逻辑阵列</strong>。</p>
+<p>例如:<br><img src="/images/Matlab/mat-17.png" alt="这是图片" title="运行结果"></p>
+<p>而逻辑操作符有一下几种</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&amp;</td>
+<td>与</td>
+</tr>
+<tr>
+<td>|</td>
+<td>或</td>
+</tr>
+<tr>
+<td>~</td>
+<td>非</td>
+</tr>
+</tbody></table>
+<hr>
+<p>在一个表达式中<br>算术运算、关系运算和逻辑运算都可以出现在表达式中,这时MATLAB的执行顺序是<br><code>圆括号-&gt;指数--&gt;逻辑非--&gt;乘除--&gt;加减--&gt;关系符号操作--&gt;逻辑与--&gt;逻辑或</code><br>在以上8个优先级中,如果同一级有多个运算,则自左向右执行。</p>
+<p>例如:</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; x=<span class="number">-2</span>;y=<span class="number">-5</span>;</span><br><span class="line">&gt;&gt; </span><br><span class="line">&gt;&gt; <span class="number">-5</span>&lt;x&amp;x&lt;<span class="number">-1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">  logical</span><br><span class="line"></span><br><span class="line">   <span class="number">1</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; ~((y&lt;=<span class="number">8</span>)|(x&lt;<span class="number">-1</span>))</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">  logical</span><br><span class="line"></span><br><span class="line">   <span class="number">0</span></span><br><span class="line"></span><br><span class="line">&gt;&gt; ~(y&lt;=<span class="number">8</span>)|(x&lt;<span class="number">-1</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">ans</span> =</span><br><span class="line"></span><br><span class="line">  logical</span><br><span class="line"></span><br><span class="line">   <span class="number">1</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="矩阵的逻辑运算"><a href="#矩阵的逻辑运算" class="headerlink" title="矩阵的逻辑运算"></a>矩阵的逻辑运算</h3><p>两个同维数的矩阵的逻辑与和逻辑或运算是相应元素的逻辑与和逻辑或运算</p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;A=[<span class="number">0</span> <span class="number">1</span> <span class="number">0</span>;<span class="number">3</span> <span class="number">2</span> <span class="number">0</span>;<span class="number">1</span> <span class="number">2</span> <span class="number">6</span>];B=[<span class="number">2</span> <span class="number">5</span> <span class="number">0</span>;<span class="number">1</span> <span class="number">3</span> <span class="number">4</span>;<span class="number">1</span> <span class="number">2</span> <span class="number">6</span>];</span><br><span class="line">&gt;&gt;A&amp;B</span><br><span class="line"><span class="built_in">ans</span>=</span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> </span><br></pre></td></tr></table></figure>
+
+<h2 id="Matlab条件语句"><a href="#Matlab条件语句" class="headerlink" title="Matlab条件语句"></a>Matlab条件语句</h2><h3 id="if-end结构"><a href="#if-end结构" class="headerlink" title="if-end结构"></a>if-end结构</h3><p><img src="/images/Matlab/mat-19.png" alt="这是图片" title="运行结果"></p>
+<h3 id="if-else-end结构"><a href="#if-else-end结构" class="headerlink" title="if-else-end结构"></a>if-else-end结构</h3><p><img src="/images/Matlab/mat-20.png" alt="这是图片" title="运行结果"></p>
+<h3 id="if-elseif-else-end结构"><a href="#if-elseif-else-end结构" class="headerlink" title="if-elseif-else-end结构"></a>if-elseif-else-end结构</h3><p><img src="/images/Matlab/mat-21.png" alt="这是图片" title="运行结果"></p>
 
     </div>
 
@@ -395,7 +474,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%BA%94%E7%94%A8Matlab"><span class="nav-number">1.</span> <span class="nav-text">开始应用Matlab</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMatlab"><span class="nav-number">1.1.</span> <span class="nav-text">什么是Matlab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%BA%94%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">开始应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%BB%98%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">二维图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.1.</span> <span class="nav-text">功能介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">绘制二维图形的基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4%E7%9A%84%E9%80%89%E9%A1%B9"><span class="nav-number">2.3.</span> <span class="nav-text">绘图命令的选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%BB%98%E5%88%B6%E5%90%8E%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="nav-number">2.4.</span> <span class="nav-text">图形绘制后的注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%9A%84%E7%BB%98%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">三维图形的绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%8A%B6%E5%9B%BE%E4%B8%8E%E8%A1%A8%E9%9D%A2%E5%9B%BE"><span class="nav-number">3.1.</span> <span class="nav-text">网状图与表面图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E9%AB%98%E7%BA%BF"><span class="nav-number">3.2.</span> <span class="nav-text">等高线</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%BA%94%E7%94%A8Matlab"><span class="nav-number">1.</span> <span class="nav-text">开始应用Matlab</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMatlab"><span class="nav-number">1.1.</span> <span class="nav-text">什么是Matlab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E5%BA%94%E7%94%A8"><span class="nav-number">1.2.</span> <span class="nav-text">开始应用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%BB%98%E5%88%B6"><span class="nav-number">2.</span> <span class="nav-text">二维图形绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D"><span class="nav-number">2.1.</span> <span class="nav-text">功能介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E4%BA%8C%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4"><span class="nav-number">2.2.</span> <span class="nav-text">绘制二维图形的基本命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%98%E5%9B%BE%E5%91%BD%E4%BB%A4%E7%9A%84%E9%80%89%E9%A1%B9"><span class="nav-number">2.3.</span> <span class="nav-text">绘图命令的选项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E7%BB%98%E5%88%B6%E5%90%8E%E7%9A%84%E6%B3%A8%E9%87%8A"><span class="nav-number">2.4.</span> <span class="nav-text">图形绘制后的注释</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E7%BB%B4%E5%9B%BE%E5%BD%A2%E7%9A%84%E7%BB%98%E5%88%B6"><span class="nav-number">3.</span> <span class="nav-text">三维图形的绘制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%8A%B6%E5%9B%BE%E4%B8%8E%E8%A1%A8%E9%9D%A2%E5%9B%BE"><span class="nav-number">3.1.</span> <span class="nav-text">网状图与表面图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%89%E9%AB%98%E7%BA%BF"><span class="nav-number">3.2.</span> <span class="nav-text">等高线</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Matlab%E6%96%87%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">Matlab文件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">4.1.</span> <span class="nav-text">介绍</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Matlab%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="nav-number">5.</span> <span class="nav-text">Matlab程序设计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="nav-number">5.1.</span> <span class="nav-text">关系运算和逻辑运算</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E7%B3%BB%E6%93%8D%E4%BD%9C%E7%AC%A6%E5%92%8C%E9%80%BB%E8%BE%91%E6%93%8D%E4%BD%9C%E7%AC%A6"><span class="nav-number">5.1.1.</span> <span class="nav-text">关系操作符和逻辑操作符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%A9%E9%98%B5%E7%9A%84%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97"><span class="nav-number">5.1.2.</span> <span class="nav-text">矩阵的逻辑运算</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Matlab%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5"><span class="nav-number">5.2.</span> <span class="nav-text">Matlab条件语句</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#if-end%E7%BB%93%E6%9E%84"><span class="nav-number">5.2.1.</span> <span class="nav-text">if-end结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-else-end%E7%BB%93%E6%9E%84"><span class="nav-number">5.2.2.</span> <span class="nav-text">if-else-end结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#if-elseif-else-end%E7%BB%93%E6%9E%84"><span class="nav-number">5.2.3.</span> <span class="nav-text">if-elseif-else-end结构</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -453,7 +532,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.2k字</span>
+  <span class="post-count">博客全站共4.8k字</span>
 </div>
 <br>
 
